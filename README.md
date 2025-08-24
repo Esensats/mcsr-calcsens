@@ -15,6 +15,9 @@ normal gameplay and EyeZoom tall window). The EyeZoom tall sensitivity
 coefficient is the one you set with `waywall.set_sensitivity` when you change
 the resolution to 16384 pixels tall.
 
+As a bonus, you will now never need to touch raw input again (yes, even when doing
+EyeZoom), and you don't have to change your DPI or host DE mouse settings.
+
 ## Usage
 
 1. Write down your current `mouseSensitivity` from `options.txt` or `standardsettings.json`. Let's say it's `0.5` (displayed as 100% in-game)
@@ -67,6 +70,8 @@ local tall_disable = function()
   waywall.set_sensitivity(0)
 end
 ```
+
+8. Disable Raw Input in Minecraft for the waywall sensitivity multipliers to take effect.
 
 Done! You should now have a similar perceived sensitivity feeling in both
 normal and EyeZoom tall window modes and your muscle memory is saved,
