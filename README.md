@@ -62,8 +62,12 @@ end
 
 ```lua
 local tall_disable = function()
-  -- Set resolution back to 384x1080...
+  -- Set resolution back to normal...
   -- Turn off the mirrors...
   waywall.set_sensitivity(0)
 end
 ```
+
+Done! You should now have a similar perceived sensitivity feeling in both
+normal and EyeZoom tall window modes and your muscle memory is saved,
+while also having a sensitivity suitable for precise boat measurements.
