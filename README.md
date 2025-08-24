@@ -71,3 +71,33 @@ end
 Done! You should now have a similar perceived sensitivity feeling in both
 normal and EyeZoom tall window modes and your muscle memory is saved,
 while also having a sensitivity suitable for precise boat measurements.
+
+## Other options
+
+Use the `--help` flag to see other options:
+
+```sh
+python calcsens.py --help
+# Output:
+# usage: calcsens.py [-h] [--normalRes NORMALRES NORMALRES] [--tallRes TALLRES TALLRES] [--newMouseSens NEWMOUSESENS]
+#                    [--vFov VFOV] [--currentTallCoef CURRENTTALLCOEF]
+#                    currentMouseSens currentNormalCoef
+#
+# Calculate new Waywall sensitivity coefficients.
+#
+# positional arguments:
+#   currentMouseSens      Current Minecraft mouseSensitivity
+#   currentNormalCoef     Current sensitivity in waywall
+#
+# options:
+#   -h, --help            show this help message and exit
+#   --normalRes NORMALRES NORMALRES
+#                         Normal resolution (width height). Default is 1920x1080
+#   --tallRes TALLRES TALLRES
+#                         Tall resolution (width height). Default is 384x16384
+#   --newMouseSens NEWMOUSESENS
+#                         New mouse sensitivity. Default is 0.02291165
+#   --vFov VFOV           Vertical FOV in degrees. Default is 30
+#   --currentTallCoef CURRENTTALLCOEF
+#                         Current tall sensitivity coefficient (if not provided, it will be computed from resolutions)
+```
