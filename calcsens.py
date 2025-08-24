@@ -1,6 +1,3 @@
-# Author: Esensats
-# License: CC0-1.0
-
 import argparse
 import math
 from dataclasses import dataclass
