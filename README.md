@@ -1,4 +1,4 @@
-# EyeZoom sensitivity calculator
+# Boat Eye sensitivity calculator
 
 When using Ninjabrain Bot with a 16384 pixels tall Minecraft window, you'll
 notice that your sensitivity feels very high, and it's very difficult to make
@@ -11,12 +11,12 @@ sensitivity you're used to, while conforming to
 [this list](https://github.com/Ninjabrain1/Ninjabrain-Bot/wiki/Boat-measurements).
 The default target `mouseSensitivity` is `0.02291165`, because it is very small and
 has a small error. The calculator gives you waywall sensitivities (for both
-normal gameplay and EyeZoom tall window). The EyeZoom tall sensitivity
+normal gameplay and boat eye tall window). The boat eye tall sensitivity
 coefficient is the one you set with `waywall.set_sensitivity` when you change
 the resolution to 16384 pixels tall.
 
 As a bonus, you will now never need to touch raw input again (yes, even when doing
-EyeZoom), and you don't have to change your DPI or host DE mouse settings.
+boat eye), and you don't have to change your DPI or host DE mouse settings.
 
 ## Usage
 
@@ -75,7 +75,7 @@ end
 8. Disable Raw Input in Minecraft for the waywall sensitivity multipliers to take effect.
 
 Done! You should now have a similar perceived sensitivity feeling in both
-normal and EyeZoom tall window modes and your muscle memory is saved,
+normal and boat eye tall window modes and your muscle memory is saved,
 while also having a sensitivity suitable for precise boat measurements.
 
 ## Other options
