@@ -41,7 +41,8 @@ local waywall = require("waywall")
 local config = {
 	input = {
     --- ...
-		sensitivity = 14.715,
+		sensitivity = 21.822959062311096, -- New normal sensitivity coefficient
+    --- ...
 	},
   -- ...
 }
@@ -57,17 +58,17 @@ return config
 local tall_enable = function()
   -- Set resolution to 384x16384...
   -- Turn on the needed mirrors...
-	waywall.set_sensitivity(0.9926665158627155)
+	waywall.set_sensitivity(1.4721637642674297) -- New tall sensitivity coefficient
 end
 ```
 
-7. Add `waywall.set_sensitivity(0)` to the line where you change the resolution back to normal (when it's 0, waywall uses the normal sensitivity coefficient). Example:
+7. Add `waywall.set_sensitivity(0)` to the line where you change the resolution back to normal. Example:
 
 ```lua
 local tall_disable = function()
   -- Set resolution back to normal...
   -- Turn off the mirrors...
-  waywall.set_sensitivity(0)
+  waywall.set_sensitivity(0) -- Back to normal sensitivity coefficient
 end
 ```
 
