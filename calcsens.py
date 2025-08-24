@@ -17,6 +17,14 @@ class NewConfig:
         )
 
 
+def mc_effective_sens(s: float) -> float:
+    """
+    Minecraft's nonlinear effective sensitivity function.
+    The game computes: f = s * 0.6 + 0.2; result = (f^3) * 8
+    """
+    return (0.6 * s + 0.2) ** 3 * 8.0
+
+
 def visible_vfov(v_deg: float, display_h: int, fb_h: int) -> float:
     """
     Visible vertical FOV (deg) with cropped framebuffer.
@@ -40,11 +48,15 @@ def calcSens(
     Compute new Waywall sensitivity coefficients given a lower Minecraft in-game sensitivity.
     If currentTallCoef is None, compute it from the resolution ratio.
     """
-    # Step 1: rescale normal coefficient to preserve sensitivity
-    scale = currentMouseSens / newMouseSens
+    # Step 1: compute Minecraft's nonlinear effective sensitivities
+    eff_old = mc_effective_sens(currentMouseSens)
+    eff_new = mc_effective_sens(newMouseSens)
+    scale = eff_old / eff_new
+
+    # Step 2: rescale normal coefficient
     new_normal = currentNormalCoef * scale
 
-    # Step 2: tall coefficient
+    # Step 3: tall coefficient
     if currentTallCoef is None:
         # derive from vertical FOV shrink
         vfov_normal = visible_vfov(v_fov, normalResolution[1], normalResolution[1])
